@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.logo{
+    width: 150px;
+}
+.contents{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.location{
+    display: block;
+}
+.icons{
+    padding-top: 50px;
+    height: 1px;
+}
+.unique{
+    font-size: 12px;
+    padding-left: 25px;
+    padding-top: 50px;
+}
+.inputField{
+    width: 480px;
+    height: 40px;
+}
+.search{
+    background-color: orange;
+}
+.other{
+    font-size: 15px;
+}
