@@ -3,7 +3,7 @@
     margin: 0;
 }
 body{
-    background-color: black;
+    background-color: rgb(25, 23, 23);
     color: white;
 }
 .logo{
@@ -13,8 +13,7 @@ body{
     display: flex;
     list-style: none;
     justify-content: space-between;
-    justify-content: space-around;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 .location{
     display: block;
@@ -24,17 +23,31 @@ body{
     height: 1px;
 }
 .unique{
-    font-size: 12px;
+    font-size: 15px;
     padding-left: 25px;
     padding-top: 50px;
 }
 .inputField{
     width: 480px;
-    height: 40px;
+    height: 34px;
 }
-.search{
-    background-color: orange;
+.search:hover{
+    background-color: #F3A847;
 }
 .other{
     font-size: 15px;
+    color: silver;
+}
+.arrange{
+    background-color: silver;
+}
+.flag{
+    width: 28px;
+    height: 18px;
+}
+.cart{
+    height: 100px;
+}
+.second{
+    width: 40%;
 }
