@@ -2,10 +2,6 @@
     padding: 0;
     margin: 0;
 }
-body{
-    background-color: rgb(25, 23, 23);
-    color: white;
-}
 .logo{
     width: 150px;
 }
@@ -13,7 +9,7 @@ body{
     display: flex;
     list-style: none;
     justify-content: space-between;
-    padding-top: 15px;
+    align-items: center;
 }
 .location{
     display: block;
@@ -45,9 +41,18 @@ body{
     width: 28px;
     height: 18px;
 }
+.count{
+    position: absolute;
+    font-size: 20px;
+}
 .cart{
-    height: 100px;
+    padding-top: 18px;
 }
 .second{
-    width: 40%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+.header_wrapper{
+    background-color: #232F3E;
 }
