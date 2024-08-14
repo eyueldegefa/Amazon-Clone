@@ -2,11 +2,11 @@ import React from 'react'
 import {Carousel} from 'react-responsive-carousel';
 import {img} from './data';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './Carousel.module.css';
+import './Carousel.css';
 
 function CarouselEffect () {
   return (
-    <div className='hero__img'>
+    <div className=''>
         <Carousel 
         autoPlay={true}
         infiniteLoop={true}
@@ -19,6 +19,7 @@ function CarouselEffect () {
                 })
             }
         </Carousel>
+        <div className='shadow'></div>
     </div>
   )
 }
