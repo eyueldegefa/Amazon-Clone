@@ -10,6 +10,7 @@
     list-style: none;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .location{
     display: block;
@@ -27,8 +28,11 @@
     width: 480px;
     height: 34px;
 }
-.search:hover{
-    background-color: #F3A847;
+.search_logo{
+    background-color: rgb(255, 191, 0);
+}
+.search_logo:hover{
+    background-color: #f6ac0e;
 }
 .other{
     font-size: 15px;
@@ -36,6 +40,8 @@
 }
 .arrange{
     background-color: silver;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .flag{
     width: 28px;
@@ -55,4 +61,8 @@
 }
 .header_wrapper{
     background-color: #232F3E;
+}
+.search_logo{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
 }

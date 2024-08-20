@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card_container{
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: black;
+    position: relative;
+    text-decoration: none;
+}
+.card_container img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+.card_container h3{
+    font-size: 15px;
+}
+.card_container:hover .button{
+    display: block;
+}
+.button{
+    display: none;
+    background-color: orange;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.product_container{
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    max-width: 1450px;
+    margin: 100px 100px;
+    gap: 20px;
+    justify-content: center;
+}
