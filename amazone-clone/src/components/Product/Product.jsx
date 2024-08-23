@@ -11,14 +11,12 @@ function Product() {
       .then((res)=>{
         // setproducts(res.data);
         console.log(res);
-        
       }).catch((err)=>{
         console.log(err);
       })
     }, [])
     
   return (
-    // <div></div>
     <section className={`${classes.product_container}`}>
       {
         products.map((singleProduct)=>{

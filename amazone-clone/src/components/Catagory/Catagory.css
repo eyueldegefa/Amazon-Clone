@@ -23,6 +23,9 @@
     font-weight: bold;
     color: rgb(38, 135, 245);
 }
+.catagory h4{
+    font-weight: 700;
+}
 .catagory_container{
     position: relative;
     margin-top: -20%;

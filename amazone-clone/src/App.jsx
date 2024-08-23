@@ -1,18 +1,11 @@
 import './App.css';
-import CarouselEffect from './components/Carousel/CarouselEffect';
-import Catagory from './components/Catagory/Catagory';
-import Header from './components/Header/Header';
-import Product from './components/Product/Product';
+// import Layout from './components/LayOut/Layout';
+// import Header from './components/Header/Header';
+import Routing from './Router.jsx';
 
 function App() {
-  return (
-    <>
-      <Header />
-      <CarouselEffect />
-      <Catagory />
-      <Product />
-    </>
-  );
+  return <Routing/>
+  
 }
 
-export default App;
+export default App

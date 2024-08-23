@@ -3,7 +3,8 @@
     margin: 0;
 }
 .logo{
-    width: 150px;
+    width: 110px;
+    height: 35px;
 }
 .contents{
     display: flex;
@@ -11,6 +12,8 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    background-color: #131921;
+    font-size: 13px;
 }
 .location{
     display: block;
@@ -20,23 +23,22 @@
     height: 1px;
 }
 .unique{
-    font-size: 15px;
-    padding-left: 25px;
+    font-size: 13px;
+    padding-left: 20px;
     padding-top: 50px;
+    color: silver;
 }
 .inputField{
-    width: 480px;
-    height: 34px;
+    width: 570px;
+    height: 32px;
+    font-size: 15px;
+    padding-top: -5px;
 }
 .search_logo{
-    background-color: rgb(255, 191, 0);
+    background-color: #FEBD69;
 }
 .search_logo:hover{
     background-color: #f6ac0e;
-}
-.other{
-    font-size: 15px;
-    color: silver;
 }
 .arrange{
     background-color: silver;
@@ -55,9 +57,13 @@
     padding-top: 18px;
 }
 .second{
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
 .header_wrapper{
     background-color: #232F3E;
@@ -65,4 +71,7 @@
 .search_logo{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px ;
+}
+lists:hover{
+    background-color: white;
 }
