@@ -6,12 +6,12 @@ export const CatagoryInfos = [
     },
     {
         title: "Women's Clothing",
-        name: "women'sclothing",
+        name: "women's clothing",
         imgLink: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     },
     {
         title: "Men's Clothing",
-        name: "men'sclothing",
+        name: "men's clothing",
         imgLink: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     }, 
     {

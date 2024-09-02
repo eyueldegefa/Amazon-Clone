@@ -43,9 +43,42 @@
 }
 .product_container{
     display: grid;
-    grid-template-columns: repeat(5, 4fr);
+    grid-template-columns: repeat(auto-fill ,minmax(200px, 1fr));
     max-width: 1450px;
     margin: 100px 100px;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
+}
+
+.product_flexed{
+    display: flex;
+    gap: 20px;
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+}
+.product_flexed h3{
+    padding: 20px 0px;
+    font-weight: 700;
+}
+.product_flexed .button{
+    width: 150px;
+    display: block;
+    position: static;
+}
+.product_flexed img{
+    width: 200px !important;
+    height: auto;
+}
+
+@media screen and(max-width: 760px) {
+    .product_flexed{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.product_desc{
+    width: 760px;
+    font-size: small;
 }
