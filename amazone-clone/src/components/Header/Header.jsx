@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom';
 import AmazonLogo from './images/Amazon-logo.png';
@@ -8,8 +8,12 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { FaSearch } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
+import { DataContext } from '../DetailProvider/DetailProvider';
 
 const Header = () => {
+  const [{basket},dispatch]=useContext(DataContext)
+  // console.log(basket.length);
+  
   return (
     <div className='header_wrapper text-white'>
         <div className='contents px-4 py-2'>
@@ -25,7 +29,7 @@ const Header = () => {
 
             <Link to="/orders" className='text-white text-decoration-none'><span className=''>Returns</span> <span className='location fw-bold'>& Orders</span></Link>
 
-            <Link to="/cart" className='text-white text-decoration-none fw-bold'><span className='count ps-2 fw-bold text-warning'>0</span><span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span></Link>
+            <Link to="/cart" className='text-white text-decoration-none fw-bold'><span className='count ps-2 fw-bold text-warning'>{basket.length}</span><span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span></Link>
         </div>
         <div className='bg-silver mx-4 py-2 second fw-bold'>
           <div className='lists'><MenuIcon/>  All</div>
