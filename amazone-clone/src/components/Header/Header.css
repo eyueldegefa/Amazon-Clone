@@ -75,3 +75,9 @@
 lists:hover{
     background-color: white;
 }
+.flexed{
+    position: fixed !important;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}

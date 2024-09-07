@@ -15,7 +15,7 @@ const Header = () => {
   // console.log(basket.length);
   
   return (
-    <div className='header_wrapper text-white'>
+    <div className='header_wrapper text-white flexed'>
         <div className='contents px-4 py-2'>
             <Link to="/" className='lists'><img className='logo' src={AmazonLogo} alt="" /></Link>
 

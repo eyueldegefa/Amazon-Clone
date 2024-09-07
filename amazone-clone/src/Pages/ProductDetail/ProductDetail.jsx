@@ -5,6 +5,7 @@ import axios from 'axios';
 import { producturl } from '../../Api/EndPoints';
 import ProductCard from '../../components/Product/ProductCard';
 import Loader from '../../components/Loader/Loader'
+import classes from './ProductDetail.module.css'
 
 function ProductDetail() {
   const {productId} = useParams()
@@ -25,10 +26,16 @@ function ProductDetail() {
 
   return (
     <Layout>
-       {isLoading? (<Loader />):(<ProductCard  
-       product={products} 
-       flex={true}
-       renderDesc={true} />)} 
+      <div className={`${classes.detail}`}>
+        {
+          isLoading? (<Loader />):(<ProductCard  
+          product={products} 
+          flex={true}
+          renderDesc={true}
+          renderAdd={true} 
+          />)
+       } 
+      </div>
     </Layout>
   )
 }

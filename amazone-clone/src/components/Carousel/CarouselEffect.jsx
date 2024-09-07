@@ -6,7 +6,7 @@ import './Carousel.css';
 
 function CarouselEffect () {
   return (
-    <div className=''>
+    <div className='slider'>
         <Carousel 
         autoPlay={true}
         infiniteLoop={true}
