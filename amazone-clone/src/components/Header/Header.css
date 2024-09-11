@@ -35,10 +35,10 @@
     padding-top: -5px;
 }
 .search_logo{
-    background-color: #FEBD69;
+    background-color: var(--primary-color);
 }
 .search_logo:hover{
-    background-color: #f6ac0e;
+    background-color: var(--primary-shadow);
 }
 .arrange{
     background-color: silver;
