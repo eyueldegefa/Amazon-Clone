@@ -14,6 +14,23 @@
 .cart_container h6{
     font-weight: bold;
 }
+.btn_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.btn{
+    padding: 5px 16px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.btn:hover svg{
+    background-color: var(--primary-color);
+}
 .subtotal{
     display: flex;
     flex-direction: column;
