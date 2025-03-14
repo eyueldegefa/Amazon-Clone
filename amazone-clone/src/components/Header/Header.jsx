@@ -16,8 +16,8 @@ const Header = () => {
   
   return (
     <div className='header_wrapper text-white flexed'>
-        <div className='contents px-4 py-2'>
-            <Link to="/" className='lists'><img className='logo' src={AmazonLogo} alt="" /></Link>
+        <section className='contents px-4 py-2'>
+            <Link to="/" className='lists hvrsqr'><img className='logo' src={AmazonLogo} alt="" /></Link> 
 
             <div><span className='unique text-silver other'>Deliver to</span><span className='location fw-bold'><span className='icons'><RoomOutlinedIcon/></span>Ethiopia</span></div>
 
@@ -30,15 +30,15 @@ const Header = () => {
             <Link to="/orders" className='text-white text-decoration-none'><span className=''>Returns</span> <span className='location fw-bold'>& Orders</span></Link>
 
             <Link to="/cart" className='text-white text-decoration-none fw-bold'><span className='count ps-2 fw-bold text-warning'>{basket.length}</span><span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span></Link>
-        </div>
-        <div className='bg-silver mx-4 py-2 second fw-bold'>
+        </section>
+        <section className='bg-silver mx-4 py-2 second fw-bold'>
           <div className='lists'><MenuIcon/>  All</div>
           <div>Today's Deals</div>
           <div>Customer Service</div>
           <div>Registry</div>
           <div>Gift Cards</div>
           <div>Sell</div>
-        </div> 
+        </section> 
     </div>
   )
 }
