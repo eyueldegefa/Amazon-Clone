@@ -11,23 +11,23 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function Cart() {
   const [{basket, user}, dispatch] = useContext(DataContext);
-  const total = basket.reduce((amount,item)=>{
-      return  item.price * item.amount  + amount
-  },0)
+  const total = basket?.reduce((amount, item)=>{
+    return item.price * item.amount + amount;
+  },0);
 
-  const increment = (item)=>{
+  const increment = (item) => {
     dispatch({
-      type:Type.ADD_TO_BASKET,
+      type: Type.ADD_TO_BASKET,
       item
-    })
-  }
+    });
+  };
 
-  const decrement = (id)=>{
+  const decrement = (id) => {
     dispatch({
-      type:Type.REMOVE_FROM_BASKET,
+      type: Type.REMOVE_FROM_BASKET,
       id
-    })
-  }
+    });
+  };
 
   return (
     <Layout>
@@ -37,32 +37,33 @@ function Cart() {
             <h6>Your shopping basket</h6>
             <hr />
             {
-              basket?.length==0?(<p>Opps! No item in your cart</p>):(
-                basket?.map((item,i)=>{
-                  return <section className='d-flex'>
-                    <ProductCard 
-                    key={i}
-                      product={item}
-                      renderDesc={true}
-                      flex={true}
-                      renderAdd={false}
-                    />
-                    {/* Buttons to increase and decrease the items */}
-                    <div className={classes.btn_container}>
-                      <button className={classes.btn} onClick={()=>increment(item)}><IoIosArrowUp size={30}/></button>
-                      <span>{item.amount}</span>
-                      <button className={classes.btn} onClick={()=>decrement(item.id)}><IoIosArrowDown size={30}/></button>
-                    </div>
-                  </section>
+              basket?.length === 0 ? (<p>Opps! No item in your cart</p>) : (
+                basket?.map((item, i) => {
+                  return (
+                    <section key={i} className='d-flex'>
+                      <ProductCard 
+                        product={item}
+                        renderDesc={true}
+                        flex={true}
+                        renderAdd={false}
+                      />
+                      {/* Buttons to increase and decrease the items */}
+                      <div className={classes.btn_container}>
+                        <button className={classes.btn} onClick={() => increment(item)}><IoIosArrowUp size={30}/></button>
+                        <span>{item.amount}</span>
+                        <button className={classes.btn} onClick={() => decrement(item.id)}><IoIosArrowDown size={30}/></button>
+                      </div>
+                    </section>
+                  )
                 })
               )
             }
           </div>
           {
-            basket?.length !==0&&(
+            basket?.length !== 0 && (
               <div className={`${classes.subtotal}`}>
                 <div>
-                  <h6>Subtotal ({basket?.length}item)</h6>
+                  <h6>Subtotal ({basket?.length} item{basket?.length > 1 ? 's' : ''})</h6>
                   <CurrencyFormat amount={total} />
                 </div>
                 <span>
@@ -78,4 +79,4 @@ function Cart() {
   )
 }
 
-export default Cart
+export default Cart;
