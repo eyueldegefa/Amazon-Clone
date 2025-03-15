@@ -13,6 +13,9 @@ import { DataContext } from '../DetailProvider/DetailProvider';
 const Header = () => {
   const [{basket},dispatch]=useContext(DataContext)
   // console.log(basket.length);
+  const totalItem = basket?.reduce((amount, item)=>{
+    return item.amount + amount;
+  },0);
   
   return (
     <div className='header_wrapper text-white flexed'>
@@ -29,7 +32,7 @@ const Header = () => {
 
             <Link to="/orders" className='text-white text-decoration-none'><span className=''>Returns</span> <span className='location fw-bold'>& Orders</span></Link>
 
-            <Link to="/cart" className='text-white text-decoration-none fw-bold'><span className='count ps-2 fw-bold text-warning'>{basket.length}</span><span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span></Link>
+            <Link to="/cart" className='text-white text-decoration-none fw-bold'><span className='count ps-2 fw-bold text-warning'>{totalItem}</span><span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span></Link>
         </section>
         <section className='bg-silver mx-4 py-2 second fw-bold'>
           <div className='lists'><MenuIcon/>  All</div>
