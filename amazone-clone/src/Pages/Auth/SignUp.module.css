@@ -3,7 +3,56 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width:  50%;
+    margin: 10px auto;
 }
 .login img{
-    margin: auto;
+    width: 25%;
+    margin: 5px auto;
+}
+.login_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+    width: 65%;
+    gap: 5px;
+}
+.login_container h3{
+    font-weight: 600;
+    float: left;
+}
+.login_container label{
+    font-weight: bold;
+    font-size: 15px;
+}
+.login_container input{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #6d6d6d;
+    border-radius: 7px;
+}
+.login_container input:hover{
+    outline: 3px solid #2eaee0;
+}
+.login_container .btn_signin{
+    width: 100%;
+    background-color: var(--primary-color);
+    margin: 10px 0;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+.login_container .btn_signin:hover{
+    background-color: var(--primary-shadow);
+}
+.login_container .btn_createacc{
+    width: 100%;
+    background-color: lightgray;
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+}
+.login_container .btn_createacc:hover{
+    background-color: grey;
 }

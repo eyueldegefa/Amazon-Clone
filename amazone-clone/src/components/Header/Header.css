@@ -2,6 +2,18 @@
     padding: 0;
     margin: 0;
 }
+.header_wrapper{
+    background-color: #232F3E;
+    position: fixed !important;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+.hover_border:hover{
+    border: 1px solid white;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
 .logo{
     width: 110px;
     height: 35px;
@@ -15,6 +27,7 @@
     background-color: #131921;
     font-size: 13px;
 }
+/* Show location part */
 .location{
     display: block;
 }
@@ -28,6 +41,16 @@
     padding-top: 50px;
     color: silver;
 }
+/* ------------------------------ */
+
+/* Change the catagory of products */
+.arrange{
+    background-color: silver;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+/* -------------------------------- */
+/* Input to Search the product */
 .inputField{
     width: 570px;
     height: 32px;
@@ -35,20 +58,21 @@
     padding-top: -5px;
 }
 .search_logo{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
     background-color: var(--primary-color);
 }
 .search_logo:hover{
     background-color: var(--primary-shadow);
 }
-.arrange{
-    background-color: silver;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
+/* ------------------------------------- */
+/* Change Language part */
 .flag{
     width: 28px;
     height: 18px;
 }
+/* ---------------------------------- */
+/* Cart */
 .count{
     position: absolute;
     font-size: 20px;
@@ -56,28 +80,17 @@
 .cart{
     padding-top: 18px;
 }
+/* ---------------------------------- */
+/* Second row of Header links */
 .second{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 40%;
-    margin: 0;
-    padding: 0;
     font-size: 13px;
 }
-.header_wrapper{
-    background-color: #232F3E;
+.second div:hover{
+    cursor: pointer;
 }
-.search_logo{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px ;
-}
-lists:hover{
-    background-color: white;
-}
-.flexed{
-    position: fixed !important;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-}
+/* -------------------------------------------- */
+
