@@ -31,16 +31,18 @@ function Cart() {
 
   return (
     <Layout>
-      <section className={`${classes.container}`}>
-        <div className={`${classes.cart_container}`}>
+      <div className={classes.header}>
           <h4>Hello</h4>
           <h6>Your shopping basket</h6>
           <hr />
+      </div>
+      <section className={`${classes.container}`}>
+        <div className={`${classes.cart_container}`}>
           {
             basket?.length === 0 ? (<p>Opps! No item in your cart</p>) : (
               basket?.map((item, i) => {
                 return (
-                  <section key={i} className='d-flex'>
+                  <section key={i} className={classes.cart_item}>
                     <ProductCard 
                       product={item}
                       renderDesc={true}
@@ -59,21 +61,25 @@ function Cart() {
             )
           }
         </div>
-        {
-          basket?.length !== 0 && (
-            <div className={`${classes.subtotal}`}>
-              <div>
-                <h6>Subtotal ({basket?.length} item{basket?.length > 1 ? 's' : ''})</h6>
-                <CurrencyFormat amount={total} />
-              </div>
-              <span>
-                <input type="checkbox" />
-                <small> This order contains a gift</small>
-              </span>
-              <Link to="/payments" >Continue to checkout</Link>
-            </div>
-          )
-        }
+
+        <div className={classes.subtotal}> 
+          {
+            basket?.length !== 0 && (
+              <>
+                <div>
+                  <h6>Subtotal ({basket?.length} item{basket?.length > 1 ? 's' : ''})</h6>
+                  <CurrencyFormat amount={total} />
+                </div>
+                <span>
+                  <input type="checkbox" />
+                  <small> This order contains a gift</small>
+                </span>
+                <Link to="/payments" >Continue to checkout</Link>
+              </>
+            )
+          }
+        </div>
+
       </section>
     </Layout>
   )

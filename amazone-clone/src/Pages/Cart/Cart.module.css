@@ -1,18 +1,29 @@
-.container{
+.header{
+    font-weight: bold;
     margin-top: 20vh;
+    padding: 20px;
+}
+.header h4, 
+.header h6{
+    font-weight: bold;
+}
+.container{
     display: flex;
+    flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    justify-content: center;
+    padding: 0 50px;
+    gap: 30px;
+    width: 100%;
 }
 .cart_container{
-    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
 }
 .cart_container img{
-    width: 100px !important;
+    width: 80px;
 }
-.cart_container h4,
-.cart_container h6{
-    font-weight: bold;
+.cart_item{
+    display: flex;
 }
 .btn_container{
     display: flex;
@@ -32,11 +43,11 @@
     background-color: var(--primary-color);
 }
 .subtotal{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
-    max-width: 220px;
+    height: 240px;
     gap: 20px;
     border: 1px solid rgb(51, 50, 50);
     padding: 20px;
@@ -59,9 +70,8 @@
 .subtotal a:hover{
     background-color: var(--primary-shadow);
 }
-@media screen and (max-width:720px) {
+@media (min-width: 720px) {
     .container{
-        flex-direction: column;
-        order: 1;
+        flex-direction: row;
     }
 }
