@@ -1,0 +1,10 @@
+.container{
+    margin-top: 100px;
+    background-color: #ededed;
+    padding: 10px 20px;
+}
+.container .orders_container{
+    margin: 20px 50px;
+    background-color: white;
+    padding: 20px;
+}

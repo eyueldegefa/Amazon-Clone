@@ -42,7 +42,7 @@ const Header = () => {
             <div className='hover_border'>
               {user ? (
                 <>
-                  <span>Hellow {user?.email?.split("@")[0]} <br /></span>
+                  <span>Hello {user?.email?.split("@")[0]} <br /></span>
                   <span onClick={()=>auth.signOut()}>Sign Out</span>
                 </>
               ): (

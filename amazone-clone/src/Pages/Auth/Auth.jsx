@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import classes from './SignUp.module.css';
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate, useLocation} from "react-router-dom";
 import amazonLogo from '../../assets/amazonLogo.png';
 import { auth } from '../../Utility/firebase';
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth';
@@ -18,6 +18,7 @@ function Signup() {
     signUp: false
   })
   const navigate = useNavigate();
+  const navStateData = useLocation();
 
   // Data Layer
   const [{user}, dispatch] = useContext(DataContext);
@@ -34,7 +35,7 @@ function Signup() {
           user: userInfo.user
         });
         setLoding({...Loding, signIn: false})
-        navigate('/');
+        navigate(navStateData?.state?.redirect || '/');
       }).catch((error)=>{
         setEmail(error.message);
       })
@@ -46,7 +47,7 @@ function Signup() {
           user: userInfo.user
         });
         setLoding({...Loding, signUp: false})
-        navigate('/');
+        navigate(navStateData?.state?.redirect || '/');
       }).catch((error)=>{
         setEmail(error.message);
       })
@@ -61,6 +62,13 @@ function Signup() {
           {/* form */}
           <div className={classes.login_container}>
             <h3>Sign in</h3>
+            {
+              navStateData?.state?.msg && (
+                <small className='text-danger py-2 fw-bold text-center'>
+                  {navStateData?.state?.msg}
+                </small>
+              )
+            }
             <form action="" >
               <div>
                 <label htmlFor="email">Email</label>
@@ -77,7 +85,7 @@ function Signup() {
                 className={classes.btn_signin}>
                   {Loding.signIn ? (<ClipLoader color='black' size={15}/>): (" Sign in")}
               </button>
-              <p>By signing-in you agree the AMAZON FAKE CLONE conditons use and sales. Please see our Company Notice, Our Cookies Notice and our Interest-Based Ads Notice </p>
+              <p>By signing-in you agree the AMAZON FAKE CLONE conditions use and sales. Please see our Company Notice, Our Cookies Notice and our Interest-Based Ads Notice </p>
               <button 
                 name='signup'
                 type='submit'

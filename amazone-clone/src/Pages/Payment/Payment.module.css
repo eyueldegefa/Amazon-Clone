@@ -7,6 +7,7 @@
 }
 h5{
     font-weight: bold;
+    width: 30%;
 }
 .payment_container{
     padding: 0px 50px;
@@ -15,10 +16,34 @@ h5{
     display: flex;
     gap: 30px;
     padding-top: 20px;
+    /* float: left; */
+    /* justify-content: space-evenly; */
 }
 .flex img{
     width: 80px !important;
 }
 .flex form {
     width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.flex button{
+    background-color: var(--primary-color);
+    padding: 5px 26px;
+    border: none;
+    border-radius: 10px;
+}
+.flex button:hover{
+    background-color: var(--primary-shadow);
+}
+@media (max-width: 720px) {
+    .flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+    h5{
+        width: 100%;
+    }
 }
