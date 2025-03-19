@@ -41,7 +41,12 @@ export const reducer = (state, action) => {
                 ...state,
                 basket: newBasket
             }
-
+        // To empty the basket after successful payment
+        case Type.EMPTY_BASKET:
+            return {
+                ...state,
+                basket: []
+            }
         // for setting the user
         case Type.SET_USER:
             return {
