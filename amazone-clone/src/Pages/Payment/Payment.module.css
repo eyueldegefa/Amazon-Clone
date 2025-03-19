@@ -38,6 +38,13 @@ h5{
 .flex button:hover{
     background-color: var(--primary-shadow);
 }
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: gray;
+}
 @media (max-width: 720px) {
     .flex{
         flex-direction: column;

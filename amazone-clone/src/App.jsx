@@ -5,7 +5,7 @@ import './App.css';
 import Routing from './Router.jsx';
 import { DataContext } from './components/DetailProvider/DetailProvider.jsx';
 import { auth } from './Utility/firebase.js';
-import { Type } from './Utility/actionType.jsx';
+import { Type } from './Utility/actionType.js';
 import { onAuthStateChanged } from 'firebase/auth';
 
 

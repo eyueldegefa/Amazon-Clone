@@ -4,7 +4,15 @@
     padding: 10px 20px;
 }
 .container .orders_container{
-    margin: 20px 50px;
+    margin: 10px 30px;
     background-color: white;
-    padding: 20px;
+    padding: 20px 50px;
+}
+.orders_container h2{
+    padding:10px 0px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
+}
+.orders_container img{
+    width: 100px !important;
 }
