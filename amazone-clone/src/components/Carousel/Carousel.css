@@ -14,5 +14,21 @@
     );
 }
 .slider{
-    margin-top: 15vh;
+    margin-top: 14vh;
+}
+@media (max-width: 760px){
+    .slider{
+        margin-top: 14vh !important;
+    }
+    .shadow::before{
+        height: 90px !important;
+    }
+}
+@media (max-width: 1025px){
+    .slider{
+        margin-top: 19vh;
+    }
+    .shadow::before{
+        height: 150px;
+    }
 }

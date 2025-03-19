@@ -9,6 +9,13 @@
     z-index: 100;
     width: 100%;
 }
+.upperHeader{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(320px, 1fr));
+    cursor: pointer;
+    justify-content: center;
+    place-items: center;
+}
 .hover_border:hover{
     border: 1px solid white;
     padding: 3px 5px;
@@ -16,16 +23,7 @@
 }
 .logo{
     width: 110px;
-    height: 35px;
-}
-.contents{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    background-color: #131921;
-    font-size: 13px;
+    height: 40px;
 }
 /* Show location part */
 .location{
@@ -52,8 +50,7 @@
 /* -------------------------------- */
 /* Input to Search the product */
 .inputField{
-    width: 570px;
-    height: 32px;
+    width: 250px;
     font-size: 15px;
     padding-top: -5px;
 }
@@ -83,14 +80,28 @@
 /* ---------------------------------- */
 /* Second row of Header links */
 .second{
+    background-color: #314256;
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
-    width: 40%;
     font-size: 13px;
+    padding: 6px 10px;
 }
 .second div:hover{
     cursor: pointer;
 }
 /* -------------------------------------------- */
 
+@media (min-width: 720px) {
+    .upperHeader{
+        grid-template-columns: repeat(auto-fill ,minmax(450px, 1fr));
+    }
+} 
+@media (min-width: 1024px) {
+    .upperHeader{
+        grid-template-columns: repeat(auto-fill ,minmax(320px, 1fr));
+    }
+    .inputField{
+        width: 250px;
+    }
+} 

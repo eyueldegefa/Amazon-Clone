@@ -20,50 +20,54 @@ const Header = () => {
   
   return (
     <div className='header_wrapper text-white flexed'>
-        <section className='contents px-4 py-2'>
+        <section className='contents p-2 upperHeader'>
+          <div className='d-flex pt-2'>
             <Link to="/" className='lists hover_border'><img className='logo' src={AmazonLogo} alt="" /></Link> 
-
-            <div className='hover_border'>
+            <div className='hover_border pb-2'>
               <span className='unique text-silver other'>Deliver to</span>
               <span className='location fw-bold'><span className='icons'><RoomOutlinedIcon/></span>Ethiopia</span>
             </div>
+          </div>
+            
+          <div className='d-flex'>
+            <span className='arrange unique text-dark py-2 border-start'>All<ArrowDropDownIcon/></span>
+            <input className='inputField px-2' type="text" placeholder='Search Amazon' />
+            <span className='search_logo py-2 px-3'><FaSearch/></span>
+          </div>
 
-            <div>
-              <span className='arrange unique text-dark py-2 border-start'>All<ArrowDropDownIcon/></span>
-              <input className='inputField px-2' type="text" placeholder='Search Amazon' />
-              <span className='search_logo py-2 px-3'><FaSearch/></span>
-            </div>
-
+          <div className='d-flex pt-3 gap-3 rightSide'>
             <div className='fw-bold hover_border'>
-              <img className='flag pe-1' src={AmericanFlag} alt="" />EN<ArrowDropDownIcon/>
+                <img className='flag pe-1' src={AmericanFlag} alt="" />EN<ArrowDropDownIcon/>
             </div>
-
-          <Link to={!user && "/auth"} className='text-white text-decoration-none'>
-            <div className='hover_border'>
-              {user ? (
-                <>
-                  <span>Hello {user?.email?.split("@")[0]} <br /></span>
-                  <span onClick={()=>auth.signOut()}>Sign Out</span>
-                </>
-              ): (
-                <>
-                  <span>Sign in <br /></span>
-                  <span className='location fw-bold'>Account & Lists <ArrowDropDownIcon/></span>
-                </>
-              )}
-            </div>
-          </Link>
-
-          <Link to="/orders" className='text-white text-decoration-none hover_border'>
-            <span className=''>Returns</span> <span className='location fw-bold'>& Orders</span>
-          </Link>
-
-          <Link to="/cart" className='text-white text-decoration-none fw-bold hover_border'>
-            <span className='count ps-2 fw-bold text-warning'>{totalItem}</span>
-            <span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span>
-          </Link>
+  
+            <Link to={!user && "/auth"} className='text-white text-decoration-none'>
+              <div className='hover_border'>
+                {user ? (
+                  <>
+                    <span>Hello {user?.email?.split("@")[0]} <br /></span>
+                    <span onClick={()=>auth.signOut()}>Sign Out</span>
+                  </>
+                ): (
+                  <>
+                    <span>Sign in <br /></span>
+                    <span className='location fw-bold'>Account & Lists <ArrowDropDownIcon/></span>
+                  </>
+                )}
+              </div>
+            </Link>
+  
+            <Link to="/orders" className='text-white text-decoration-none hover_border'>
+              <span className=''>Returns & </span> <span className='location fw-bold'>Orders</span>
+            </Link>
+  
+            <Link to="/cart" className='text-white text-decoration-none fw-bold hover_border'>
+              <span className='count ps-2 fw-bold text-warning'>{totalItem}</span>
+              <span className='cart location'><ShoppingCartOutlinedIcon/>Cart</span>
+            </Link>
+          </div>
         </section>
-        <section className='bg-silver mx-4 py-2 second fw-bold'>
+
+        <section className='second fw-bold'>
           <div className='lists hover_border'><MenuIcon/>  All</div>
           <div className='hover_border'>Today's Deals</div>
           <div className='hover_border'>Customer Service</div>
