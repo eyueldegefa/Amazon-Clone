@@ -1,0 +1,20 @@
+.backBtn{
+    background-color: #37475A;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.firstRow{
+    background-color: #232F3E;
+    color: white;
+}
+.firstRow div ul{
+    list-style: none;
+}
+.firstRow div ul li{
+    color: silver;
+}
+.firstRow div ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

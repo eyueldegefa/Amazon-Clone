@@ -1,12 +1,12 @@
 import React from 'react'
-import './CatagoryFullInfo'
-import './Catagory.css'
+import './CategoryFullInfo'
+import './Category.css'
 import { Link } from 'react-router-dom'
 
-function CatagoryCard({data}) {
+function CategoryCard({data}) {
   return (
-    <div className='catagory'>
-        <Link to={`/catagory/${data.name}`}>
+    <div className='category'>
+        <Link to={`/category/${data.name}`}>
             <span>
                 <h4>{data.title}</h4>
             </span>
@@ -17,4 +17,4 @@ function CatagoryCard({data}) {
   )
 }
 
-export default CatagoryCard
+export default CategoryCard

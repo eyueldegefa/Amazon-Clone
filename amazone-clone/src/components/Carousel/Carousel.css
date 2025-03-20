@@ -16,9 +16,18 @@
 .slider{
     margin-top: 14vh;
 }
+@media (max-width: 555px){
+    .slider img {
+        margin-top: 10vh !important;
+        height: 230px;
+    }
+    .shadow::before{
+        height: 20px !important;
+    }
+}
 @media (max-width: 760px){
     .slider{
-        margin-top: 14vh !important;
+        margin-top: 13vh !important;
     }
     .shadow::before{
         height: 90px !important;

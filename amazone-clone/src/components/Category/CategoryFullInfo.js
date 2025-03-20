@@ -1,4 +1,4 @@
-export const CatagoryInfos = [
+export const CategoryInfos = [
     {
         title: "Electronics",
         name: "electronics",
@@ -15,8 +15,8 @@ export const CatagoryInfos = [
         imgLink: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     }, 
     {
-        title: "Jewlery",
-        name: "jewlery",
+        title: "Jewelry",
+        name: "jewelry",
         imgLink: "https://m.media-amazon.com/images/I/71r7eWuCsaL._AC_UL480_FMwebp_QL65_.jpg",
     },
 ]
