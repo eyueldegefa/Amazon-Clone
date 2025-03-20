@@ -1,20 +1,114 @@
 .backBtn{
-    background-color: #37475A;
+    background-color: #37475a;
     color: white;
     text-align: center;
+    cursor: pointer;
     padding: 10px 0;
 }
+.backBtn:hover{
+    background-color: #27374a;
+}
 .firstRow{
-    background-color: #232F3E;
+    background-color: #2c3949;
     color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(230px, 1fr));
+    gap: 10px;
+    padding: 20px 120px;
+    border-bottom: 1px solid #515151;
 }
 .firstRow div ul{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .firstRow div ul li{
     color: silver;
+    font-size: 14px;
+
 }
 .firstRow div ul li:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+.secondRow{
+    background-color: #2c3949;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    color: silver;
+    font-size: 14px;
+}
+.amazonLogo{
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.americanFlag{
+    width: 30px;
+    padding-right: 5px;
+}
+.secondRow div{
+    border: 1px solid gray;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* ----------------------- */
+.thirdRow{
+    background-color: #131921;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(110px, 1fr));
+    font-size: 13px;
+    padding: 20px 140px;
+    gap: 23px;
+}
+.txtSilver{
+    color: gray;
+}
+.thirdRow div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* --------------------------------------------- */
+.forthRow{
+    background-color: #131921;
+    color: white;
+    font-size: 13px;
+    padding: 30px 5px;
+}
+.forthRowFlex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.forthRowFlex div:hover{
+    text-decoration: underline
+}
+@media (max-width:720px) {
+    .firstRow{
+        grid-template-columns: repeat(auto-fill ,minmax(130px, 1fr));
+        padding: 15px;
+    }
+    .secondRow{
+        padding: 10px;
+        gap: 5px;
+    }
+    .secondRow div{
+        padding: 2px 3px;
+    }
+    .thirdRow{
+        grid-template-columns: repeat(auto-fill ,minmax(80px, 1fr));
+        padding: 20px;
+    }
+    .forthRowFlex{
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
 }
