@@ -10,11 +10,13 @@
     width: 100%;
 }
 .upperHeader{
-    display: grid;
-    grid-template-columns: repeat(auto-fill ,minmax(320px, 1fr));
     cursor: pointer;
     justify-content: center;
     place-items: center;
+}
+.upperHeader .headerColumns{
+    display: flex;
+    justify-content: center;
 }
 .hover_border:hover{
     border: 1px solid white;
@@ -41,7 +43,7 @@
 }
 /* ------------------------------ */
 
-/* Change the catagory of products */
+/* Change the category of products */
 .arrange{
     background-color: silver;
     border-bottom-left-radius: 10px;
@@ -91,17 +93,3 @@
     cursor: pointer;
 }
 /* -------------------------------------------- */
-
-@media (min-width: 720px) {
-    .upperHeader{
-        grid-template-columns: repeat(auto-fill ,minmax(450px, 1fr));
-    }
-} 
-@media (min-width: 1024px) {
-    .upperHeader{
-        grid-template-columns: repeat(auto-fill ,minmax(320px, 1fr));
-    }
-    .inputField{
-        width: 250px;
-    }
-} 
