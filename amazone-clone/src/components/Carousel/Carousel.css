@@ -18,7 +18,6 @@
 }
 @media (max-width: 555px){
     .slider img {
-        margin-top: 10vh !important;
         height: 230px;
     }
     .shadow::before{
@@ -35,7 +34,7 @@
 }
 @media (max-width: 1025px){
     .slider{
-        margin-top: 19vh;
+        margin-top: 16vh;
     }
     .shadow::before{
         height: 150px;
